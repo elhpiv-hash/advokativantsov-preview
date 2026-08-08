@@ -10,9 +10,7 @@
        отключено: все настоящие телефоны заданы явными ссылками tel:. -->
   <meta name="format-detection" content="telephone=no">
 
-  <!-- ТЕСТОВАЯ КОПИЯ. Запрет индексации, чтобы копия не попала в поиск
-       и не создала дубль advokativantsov.ru. В рабочую версию сайта
-       эта строка НЕ переносится. -->
+  <!-- ТЕСТОВАЯ КОПИЯ. Запрет индексации. В рабочую версию НЕ переносится. -->
   <meta name="robots" content="noindex, nofollow">
 
   <!-- ===== SEO ===== -->
@@ -50,8 +48,8 @@
   <link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Параметр v= менять при обновлении файлов — сбрасывает кэш браузера -->
-  <link rel="stylesheet" href="css/style.css?v=37t">
-  <script src="js/main.js?v=37t" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=38t">
+  <script src="js/main.js?v=38t" defer></script>
 
   <!-- ===== Schema.org: Attorney ===== -->
   <script type="application/ld+json">
@@ -860,6 +858,16 @@
   <a class="mobile-bar__btn" href="https://wa.me/79260730999" target="_blank" rel="noopener" data-site="whatsapp-link" data-goal="whatsapp_mobile_panel">WhatsApp</a>
   <a class="mobile-bar__btn" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_mobile_panel">Telegram</a>
 </div>
+
+<!-- ===== Яндекс Метрика: учёт визитов без JavaScript =====
+     Сам счётчик грузится скриптом (js/main.js, константа METRIKA_ID).
+     Без этого пикселя посетитель с отключённым или не загрузившимся
+     JavaScript не попадал бы в статистику вообще — даже как просмотр.
+     Номер счётчика здесь задан числом: подставить его скриптом нельзя,
+     блок работает именно тогда, когда скрипты не выполняются.
+     ВНИМАНИЕ: при смене счётчика правится в двух местах — здесь
+     и в METRIKA_ID в js/main.js. -->
+<!-- ТЕСТОВАЯ КОПИЯ: noscript-пиксель Метрики удалён, чтобы тестовые заходы не попадали в статистику. В рабочей версии он есть. -->
 
 </body>
 </html>
