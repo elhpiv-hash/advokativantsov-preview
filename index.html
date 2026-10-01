@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- Safari на iPhone сам превращает похожие на телефон числа в ссылки
        на звонок — из-за этого регистрационный номер адвоката «77/16961»
@@ -10,33 +10,37 @@
        отключено: все настоящие телефоны заданы явными ссылками tel:. -->
   <meta name="format-detection" content="telephone=no">
 
-  <!-- ТЕСТОВАЯ КОПИЯ. Запрет индексации. В рабочую версию НЕ переносится. -->
-  <meta name="robots" content="noindex, nofollow">
-
   <!-- ===== SEO ===== -->
+  <meta name="robots" content="noindex, nofollow">
   <title>Адвокат по уголовным делам в Москве — Иванцов Сергей Анатольевич</title>
   <meta name="description" content="Адвокат по уголовным делам Сергей Иванцов, АП города Москвы, рег. № 77/16961. Защита подозреваемых, обвиняемых, потерпевших и предпринимателей на всех стадиях уголовного процесса. Более 20 лет юридической практики. Москва, круглосуточно.">
 
   <link rel="canonical" href="https://advokativantsov.ru/">
 
-  <!-- Open Graph -->
+  <!-- Open Graph. Пути к картинке только абсолютные: мессенджеры и
+       соцсети забирают её со своих серверов и относительный путь
+       превращается в битую ссылку. Ширина и высота указаны настоящие,
+       снятые из самого файла, — расхождение с реальными размерами
+       заставляет часть сервисов перекачивать картинку заново. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://advokativantsov.ru/">
   <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Адвокат Иванцов Сергей Анатольевич">
   <meta property="og:title" content="Адвокат по уголовным делам в Москве — Иванцов Сергей Анатольевич">
   <meta property="og:description" content="Защита подозреваемых, обвиняемых, потерпевших и предпринимателей на всех стадиях уголовного процесса. Более 20 лет юридической практики, опыт службы в правоохранительных органах.">
-  <!-- TODO после публикации: заменить на абсолютный URL вида https://домен/assets/img/og-cover.jpg
-       (соцсети и мессенджеры не понимают относительный путь) -->
-  <meta property="og:image" content="assets/img/og-cover.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://advokativantsov.ru/assets/img/og-cover.jpg">
+  <meta property="og:image:secure_url" content="https://advokativantsov.ru/assets/img/og-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1610">
+  <meta property="og:image:height" content="977">
   <meta property="og:image:alt" content="Адвокат по уголовным делам Иванцов Сергей Анатольевич, Москва">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Адвокат по уголовным делам в Москве — Иванцов Сергей Анатольевич">
   <meta name="twitter:description" content="Защита на всех стадиях уголовного процесса. Более 20 лет юридической практики. Москва, круглосуточно.">
-  <meta name="twitter:image" content="assets/img/og-cover.jpg">
+  <meta name="twitter:image" content="https://advokativantsov.ru/assets/img/og-cover.jpg">
+  <meta name="twitter:image:alt" content="Адвокат по уголовным делам Иванцов Сергей Анатольевич, Москва">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -48,8 +52,8 @@
   <link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Параметр v= менять при обновлении файлов — сбрасывает кэш браузера -->
-  <link rel="stylesheet" href="css/style.css?v=38t">
-  <script src="js/main.js?v=38t" defer></script>
+  <link rel="stylesheet" href="css/style.min.css?v=63">
+  <script src="js/main.min.js?v=63" defer></script>
 
   <!-- ===== Schema.org: Attorney ===== -->
   <script type="application/ld+json">
@@ -79,7 +83,7 @@
     "knowsAbout": [
       "Уголовная защита",
       "Защита по тяжким уголовным делам",
-      "Экономические и должностные преступления",
+      "Уголовные дела в сфере предпринимательской деятельности",
       "Представительство потерпевших"
     ],
     "sameAs": [
@@ -179,7 +183,7 @@
 
     <nav class="nav" id="nav" aria-label="Разделы страницы">
       <a class="nav__link" href="#criminal">Уголовная защита</a>
-      <a class="nav__link" href="#business">Экономические дела</a>
+      <a class="nav__link" href="#business">Дела предпринимателей</a>
       <a class="nav__link" href="#victim">Представительство потерпевших</a>
       <a class="nav__link" href="#about">Почему мне доверяют</a>
       <a class="nav__link" href="#contacts">Контакты</a>
@@ -230,6 +234,8 @@
         <a class="btn btn--ghost" href="#consultation" data-goal="consultation_button">Записаться на консультацию</a>
       </div>
 
+      <p class="hero__alt">Не&nbsp;готовы звонить? <a href="#lead-form" data-goal="lead_hero">Оставьте заявку</a> — перезвоню сам.</p>
+
       <p class="hero__note">Краткий первичный разговор позволяет определить срочность ситуации и&nbsp;возможность принять поручение. Правовой анализ, оценка перспектив и&nbsp;рекомендации проводятся в&nbsp;рамках платной консультации.</p>
     </div>
   </section>
@@ -242,11 +248,17 @@
         <div class="urgent__text" data-reveal>
           <h2 class="section__title">Если это происходит прямо сейчас</h2>
           <p class="urgent__desc">Задержание. Обыск. Вызов на&nbsp;допрос. Повестка. Проверка в&nbsp;отношении компании. В&nbsp;этих ситуациях счёт идёт на&nbsp;часы — не&nbsp;давайте объяснений до&nbsp;разговора с&nbsp;адвокатом.</p>
+          <!-- Текст CTA раздела 5 ТЗ сведён сюда: отдельный призыв сразу
+               под этим блоком повторял бы его слово в слово. Смысл и все
+               три канала связи сохранены, лишнего экрана нет. -->
+          <p class="urgent__desc">Позвоните или направьте краткое сообщение. Определю, возможен ли срочный выезд и&nbsp;какие действия необходимо предпринять до&nbsp;прибытия адвоката.</p>
           <p class="urgent__note">Срочный выезд адвоката — круглосуточно.</p>
         </div>
         <div class="urgent__actions" data-reveal>
           <a class="btn btn--primary btn--wide" href="tel:+79260730999" data-site="phone-link" data-goal="phone_urgent">Позвонить сейчас</a>
           <a class="btn btn--ghost btn--wide" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_urgent">Написать в Telegram</a>
+          <a class="btn btn--ghost btn--wide" href="https://wa.me/79260730999" target="_blank" rel="noopener" data-site="whatsapp-link" data-goal="whatsapp_urgent">Написать в WhatsApp</a>
+          <p class="cta__alt">Не готовы говорить прямо сейчас? <a href="#lead-form" data-goal="lead_urgent">Оставьте заявку</a> — перезвоню сам.</p>
         </div>
       </div>
     </div>
@@ -279,7 +291,7 @@
 
         <a class="service" href="#business" data-reveal>
           <span class="service__num">03</span>
-          <h3 class="service__title">Экономические и&nbsp;должностные преступления</h3>
+          <h3 class="service__title">Уголовные дела в&nbsp;сфере предпринимательской деятельности</h3>
           <p class="service__desc">Защита предпринимателей, собственников бизнеса, руководителей организаций по&nbsp;уголовным делам экономической направленности (ст.&nbsp;159, 160, 199, 201, 204, 291 УК&nbsp;РФ).</p>
           <span class="service__more">Подробнее</span>
         </a>
@@ -333,13 +345,26 @@
     </div>
   </section>
 
+  <!-- CTA после блока общей уголовной защиты (ТЗ, раздел 5) -->
+  <aside class="cta theme-paper" aria-label="Записаться на оценку положения по делу">
+    <div class="container cta__inner" data-reveal>
+      <div class="cta__text">
+        <p class="cta__title">Нужна оценка положения по&nbsp;уголовному делу?</p>
+        <p class="cta__desc">Изучу обстоятельства, объясню процессуальные риски и&nbsp;предложу порядок дальнейших действий.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="#consultation" data-goal="consultation_cta">Записаться на консультацию</a>
+      </div>
+    </div>
+  </aside>
+
   <!-- ============================= 5. ЭКОНОМИЧЕСКИЕ И ДОЛЖНОСТНЫЕ ПРЕСТУПЛЕНИЯ =============================
        ТЗ п.7: показывать как одно из направлений уголовной практики,
        без акцента на бизнес как основную специализацию. -->
   <section class="section theme-light" id="business">
     <div class="container">
-      <p class="sheet-label" data-reveal>лист 04 · экономические дела</p>
-      <h2 class="section__title" data-reveal>Экономические и&nbsp;должностные преступления</h2>
+      <p class="sheet-label" data-reveal>лист 04 · дела предпринимателей</p>
+      <h2 class="section__title" data-reveal>Уголовные дела в&nbsp;сфере предпринимательской деятельности</h2>
 
       <div class="business__intro" data-reveal>
         <p>Защита предпринимателей и&nbsp;руководителей организаций по&nbsp;уголовным делам&nbsp;— одно из&nbsp;направлений моей уголовно-правовой практики. При защите по&nbsp;делам экономической направленности учитываю особенности предпринимательской деятельности, финансовых документов и&nbsp;корпоративных отношений.</p>
@@ -416,6 +441,21 @@
     </div>
   </section>
 
+  <!-- CTA после блока о предпринимательской деятельности (ТЗ, раздел 5) -->
+  <aside class="cta theme-paper" aria-label="Обсудить проверку компании или руководителя">
+    <div class="container cta__inner" data-reveal>
+      <div class="cta__text">
+        <p class="cta__title">Проводится проверка компании или руководителя?</p>
+        <p class="cta__desc">Чем раньше защита подключится к&nbsp;проверке, обыску или изъятию документов, тем больше возможностей сохранить доказательства и&nbsp;предупредить процессуальные ошибки.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_cta">Обсудить ситуацию</a>
+        <a class="btn btn--ghost" href="tel:+79260730999" data-site="phone-link" data-goal="phone_cta">Позвонить адвокату</a>
+        <p class="cta__alt">Не готовы говорить прямо сейчас? <a href="#lead-form" data-goal="lead_cta">Оставьте заявку</a> — перезвоню сам.</p>
+      </div>
+    </div>
+  </aside>
+
   <!-- ============================= 6. ПОТЕРПЕВШИЕ ============================= -->
   <section class="section theme-paper" id="victim">
     <div class="container">
@@ -433,6 +473,20 @@
       </div>
     </div>
   </section>
+
+  <!-- CTA после блока для потерпевших (ТЗ, раздел 5) -->
+  <aside class="cta theme-light" aria-label="Записаться на анализ документов">
+    <div class="container cta__inner" data-reveal>
+      <div class="cta__text">
+        <p class="cta__title">Проверка затягивается или в&nbsp;возбуждении уголовного дела отказано?</p>
+        <p class="cta__desc">Проанализирую материал проверки, оценю законность принятых решений и&nbsp;возможные способы их&nbsp;обжалования.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="#consultation" data-goal="consultation_cta">Записаться на анализ документов</a>
+        <p class="cta__note">Изучение материалов проверки проводится в рамках платной консультации.</p>
+      </div>
+    </div>
+  </aside>
 
   <!-- ============================= 7. КАК СТРОИТСЯ ЗАЩИТА ============================= -->
   <section class="section theme-light" id="process">
@@ -477,6 +531,22 @@
       </ol>
     </div>
   </section>
+
+  <!-- CTA после блока апелляции и кассации (ТЗ, раздел 5).
+       Стоит за секцией «Как строится защита», которая завершается
+       шагом об обжаловании — якорем #appeal. -->
+  <aside class="cta theme-paper" aria-label="Направить документы для оценки перспектив обжалования">
+    <div class="container cta__inner" data-reveal>
+      <div class="cta__text">
+        <p class="cta__title">Приговор уже вынесен?</p>
+        <p class="cta__desc">Для оценки перспектив необходимо изучить судебные решения и&nbsp;ключевые материалы уголовного дела.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_cta">Направить краткое описание и документы</a>
+        <p class="cta__note">Оценка перспектив обжалования проводится в рамках платной консультации.</p>
+      </div>
+    </div>
+  </aside>
 
   <!-- ============================= 8. ПОЧЕМУ МНЕ ДОВЕРЯЮТ ЗАЩИТУ =============================
        Текст предоставлен адвокатом (ТЗ, раздел 4). Не переписывать без согласования. -->
@@ -556,6 +626,78 @@
     </div>
   </section>
 
+  <!-- ============================= 9. ИЗ ПРАКТИКИ АДВОКАТА =============================
+       ТЗ, раздел 6. Размещён после блока «Почему мне доверяют», якорь #cases.
+       Восьмой якорь из раздела 4 ТЗ появляется именно здесь.
+
+       СТРУКТУРА КАРТОЧКИ (ТЗ): лейбл-результат → категория дела →
+       исходная ситуация → действия защиты → результат либо стадия →
+       при необходимости «Подробнее» с раскрывающимся текстом.
+
+       КАК ДОБАВИТЬ КАРТОЧКУ: скопировать <article class="case"> целиком,
+       поменять тексты и номера в id (case-panel-N / case-head-N).
+       Сетка перестраивается сама — перевёрстка блока не нужна.
+
+       ЗАПРЕЩЕНО (ТЗ): слова «победа», «выиграл», «гарантия результата»,
+       персональные данные доверителей, материалы дел без согласования. -->
+  <section class="section theme-light" id="cases">
+    <div class="container">
+      <p class="sheet-label" data-reveal>лист 08 · из практики</p>
+      <h2 class="section__title" data-reveal>Из практики адвоката</h2>
+      <p class="section__note" data-reveal>Примеры приводятся без раскрытия адвокатской тайны. Результат каждого дела зависит от конкретных обстоятельств и&nbsp;не&nbsp;гарантирует аналогичного исхода в&nbsp;другой ситуации.</p>
+
+      <div class="cases" data-reveal-group>
+        <article class="case" data-reveal>
+          <span class="case__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 4 6v6c0 4.4 3.2 7.9 8 9 4.8-1.1 8-4.6 8-9V6l-8-3Z"/>
+            </svg>
+          </span>
+          <p class="case__label">Без реального срока</p>
+          <h3 class="case__title">Незаконный оборот оружия</h3>
+          <p class="case__code">ст. 222–223 УК&nbsp;РФ</p>
+          <p class="case__text">К&nbsp;адвокату обратился доверитель, обвиняемый по&nbsp;делу о&nbsp;незаконном обороте оружия.</p>
+          <p class="case__text">В&nbsp;ходе рассмотрения дела защита последовательно оспаривала квалификацию деяния и&nbsp;достаточность представленных обвинением доказательств.</p>
+          <p class="case__result">По&nbsp;результатам рассмотрения уголовного дела суд назначил 5&nbsp;лет лишения свободы условно с&nbsp;испытательным сроком 5&nbsp;лет&nbsp;— без реального лишения свободы.</p>
+          <p class="case__result">Вместе с&nbsp;тем защита не&nbsp;согласна с&nbsp;квалификацией деяния и&nbsp;оценкой доказательств, в&nbsp;связи с&nbsp;чем обжалование приговора продолжается.</p>
+          <p class="case__stage">Обжалование приговора продолжается</p>
+        </article>
+
+        <article class="case" data-reveal>
+          <span class="case__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v18M5 7h14M7 7l-3 6a3.5 3.5 0 0 0 6 0L7 7Zm10 0-3 6a3.5 3.5 0 0 0 6 0l-3-6Z"/>
+            </svg>
+          </span>
+          <p class="case__label">Без реального срока</p>
+          <h3 class="case__title">Наркотические статьи</h3>
+          <p class="case__code">ч.&nbsp;2 ст.&nbsp;228 УК&nbsp;РФ</p>
+          <p class="case__text">К&nbsp;адвокату обратился доверитель, обвиняемый по&nbsp;ч.&nbsp;2 ст.&nbsp;228 УК&nbsp;РФ&nbsp;— незаконное приобретение и&nbsp;хранение наркотических средств в&nbsp;крупном размере без цели сбыта.</p>
+          <p class="case__result">По&nbsp;результатам рассмотрения уголовного дела суд назначил наказание в&nbsp;виде лишения свободы условно с&nbsp;испытательным сроком. Реальное лишение свободы назначено не&nbsp;было.</p>
+          <p class="case__result">Ранее избранная в&nbsp;отношении доверителя мера пресечения отменена.</p>
+          <p class="case__stage">Назначено условное наказание</p>
+        </article>
+
+        <article class="case" data-reveal>
+          <span class="case__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/>
+              <path d="M14 3v5h5M9 13h6M9 17h4"/>
+            </svg>
+          </span>
+          <p class="case__label">Квалификация пересмотрена</p>
+          <h3 class="case__title">Тяжкое преступление против личности</h3>
+          <p class="case__code">представление интересов потерпевшего</p>
+          <p class="case__text">Адвокат представлял интересы потерпевшего по&nbsp;уголовному делу, первоначально возбуждённому по&nbsp;признакам причинения лёгкого вреда здоровью (ч.&nbsp;2 ст.&nbsp;115 УК&nbsp;РФ).</p>
+          <p class="case__text">Позиция представителя потерпевшего заключалась в&nbsp;том, что фактические обстоятельства и&nbsp;характер действий обвиняемого свидетельствовали о&nbsp;наличии признаков более тяжкого преступления.</p>
+          <p class="case__result">По&nbsp;жалобе адвоката прокуратура признала доводы обоснованными. Уголовное дело было изъято из&nbsp;органа дознания и&nbsp;передано для производства предварительного следствия по&nbsp;признакам покушения на&nbsp;убийство (ч.&nbsp;3 ст.&nbsp;30, ст.&nbsp;105 УК&nbsp;РФ).</p>
+          <p class="case__result">По&nbsp;результатам рассмотрения уголовного дела судом постановлен обвинительный приговор с&nbsp;назначением наказания в&nbsp;виде 6&nbsp;лет лишения свободы. Приговор оставлен без изменения судом апелляционной инстанции.</p>
+          <p class="case__stage">Обвинительный приговор вступил в законную силу</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ============================= 10. НЕЗАВИСИМЫЕ ПЛОЩАДКИ ============================= -->
   <section class="section theme-paper" id="trust">
     <div class="container">
@@ -564,7 +706,6 @@
       <p class="section__note" data-reveal>Не&nbsp;верьте словам с&nbsp;сайта — проверьте репутацию там, где отзывы нельзя отредактировать.</p>
 
       <div class="platforms" data-reveal-group>
-        <!-- TODO: заменить текстовые знаки на официальные логотипы площадок (SVG) в assets/img/ -->
         <a class="platform" href="https://profi.ru/profile/IvantsovSA4" target="_blank" rel="noopener" data-reveal>
           <span class="platform__logo platform__logo--profi">Профи.ру</span>
           <!-- Рейтинг получен со страницы профиля; уточнить актуальность перед сдачей -->
@@ -640,6 +781,8 @@
           <a class="btn btn--primary btn--wide" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_consultation">Направить краткое описание ситуации</a>
         </article>
       </div>
+
+      <p class="pricing__alt" data-reveal>Не&nbsp;готовы звонить прямо сейчас? <a href="#lead-form" data-goal="lead_consultation">Оставьте заявку</a> — достаточно имени и&nbsp;телефона, перезвоню сам.</p>
     </div>
   </section>
 
@@ -814,6 +957,81 @@
             <a class="btn btn--ghost btn--wide" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_contacts">Написать в Telegram</a>
             <a class="btn btn--ghost btn--wide" href="https://wa.me/79260730999" target="_blank" rel="noopener" data-site="whatsapp-link" data-goal="whatsapp_contacts">Написать в WhatsApp</a>
           </div>
+
+          <!-- ===== Форма заявки (ТЗ, раздел 9) =====
+               Снижает порог первого контакта: часть посетителей после
+               задержания или обыска не готова звонить сразу.
+               novalidate — проверку ведём сами, чтобы тексты ошибок были
+               на русском и одинаковыми во всех браузерах. -->
+          <!-- ym-hide-content на всей форме: Вебвизор не должен записывать ни ввод,
+               ни тексты ошибок валидации. Поле «Ситуация» может содержать
+               сведения, составляющие адвокатскую тайну. -->
+          <form class="lead ym-hide-content ym-disable-keys" id="lead-form" novalidate>
+            <h3 class="lead__title">Оставить заявку</h3>
+            <p class="lead__lead">Достаточно имени и&nbsp;телефона — перезвоню сам.</p>
+
+            <div class="field">
+              <label class="field__label" for="lead-name">Имя</label>
+              <input class="field__input ym-disable-keys ym-hide-content" id="lead-name" name="name" type="text"
+                     autocomplete="given-name" required maxlength="60"
+                     aria-describedby="lead-name-error">
+              <p class="field__error" id="lead-name-error" hidden>Укажите, как к вам обращаться</p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="lead-phone">Телефон</label>
+              <input class="field__input ym-disable-keys ym-hide-content" id="lead-phone" name="phone" type="tel"
+                     inputmode="tel" autocomplete="tel" required
+                     placeholder="+7 (___) ___-__-__"
+                     aria-describedby="lead-phone-error">
+              <p class="field__error" id="lead-phone-error" hidden>Введите номер полностью</p>
+            </div>
+
+            <!-- Предпочтительный способ связи (ТЗ, задача 5). Необязательное:
+                 по умолчанию звонок. Часть людей оставляет заявку там, где
+                 говорить нельзя, — пусть скажут об этом сами. -->
+            <fieldset class="field method">
+              <legend class="field__label">Как удобнее связаться</legend>
+              <div class="method__options">
+                <label class="method__option">
+                  <input class="method__input ym-disable-keys ym-hide-content" type="radio" name="contact_method" value="call" checked>
+                  <span class="method__label">Позвонить</span>
+                </label>
+                <label class="method__option">
+                  <input class="method__input ym-disable-keys ym-hide-content" type="radio" name="contact_method" value="whatsapp">
+                  <span class="method__label">WhatsApp</span>
+                </label>
+                <label class="method__option">
+                  <input class="method__input ym-disable-keys ym-hide-content" type="radio" name="contact_method" value="telegram">
+                  <span class="method__label">Telegram</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label class="field__label" for="lead-message">Кратко опишите ситуацию <span class="field__optional">— необязательно</span></label>
+              <textarea class="field__input field__input--area ym-disable-keys ym-hide-content" id="lead-message" name="message"
+                        rows="3" maxlength="600"></textarea>
+              <!-- ТЗ, п. 9.2: подпись удерживает от раскрытия чувствительных
+                   деталей дела до личного разговора -->
+              <p class="field__hint">Не&nbsp;указывайте подробности дела — этого достаточно для первого звонка.</p>
+            </div>
+
+            <!-- Согласие на обработку ПД — отдельным действием, без объединения
+                 с иными подтверждениями: ст. 9 152-ФЗ в редакции ФЗ-156,
+                 действующей с 01.09.2025. Ссылка на политику вынесена
+                 из текста галки отдельной строкой ниже и условием не является. -->
+            <label class="consent">
+              <input class="consent__box ym-disable-keys ym-hide-content" id="lead-consent" name="consent" type="checkbox" required>
+              <span class="consent__text">Я даю согласие на&nbsp;обработку моих персональных данных</span>
+            </label>
+
+            <p class="consent__policy">Отправляя заявку, вы&nbsp;подтверждаете, что ознакомлены с&nbsp;<a href="policy/" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+
+            <button class="btn btn--primary btn--wide lead__submit" id="lead-submit" type="submit" disabled>Отправить заявку</button>
+
+            <p class="lead__status" id="lead-status" role="status" aria-live="polite" hidden></p>
+          </form>
         </div>
 
         <!-- Живая Яндекс Карта с меткой офиса; стилизуется фильтром под тёмную гамму -->
@@ -836,7 +1054,7 @@
     <p class="footer__name">Адвокат Иванцов Сергей Анатольевич · АП города Москвы · рег. № 77/16961</p>
     <nav class="footer__nav" aria-label="Разделы страницы">
       <a href="#criminal">Уголовная защита</a>
-      <a href="#business">Экономические и должностные преступления</a>
+      <a href="#business">Уголовные дела в сфере предпринимательской деятельности</a>
       <a href="#victim">Представительство потерпевших</a>
       <a href="#about">Почему мне доверяют</a>
       <a href="#consultation">Консультации и стоимость</a>
@@ -849,6 +1067,12 @@
       <a href="https://harant.ru/lawyers/moskva/ivanczov-sergej-anatolevich/" target="_blank" rel="noopener">HARANT</a>
       <a href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_footer">Telegram</a>
     </nav>
+    <nav class="footer__legal" aria-label="Правовая информация">
+      <a href="policy/" target="_blank" rel="noopener">Политика конфиденциальности</a>
+      <!-- Выбор по cookie должен отзываться так же просто, как давался.
+           Кнопка скрыта до загрузки скрипта: без него ей нечего открывать. -->
+      <button class="footer__legal-btn" type="button" id="cookie-settings" hidden>Настройки cookie</button>
+    </nav>
   </div>
 </footer>
 
@@ -857,17 +1081,39 @@
   <a class="mobile-bar__btn mobile-bar__btn--call" href="tel:+79260730999" data-site="phone-link" data-goal="phone_mobile_panel">Позвонить</a>
   <a class="mobile-bar__btn" href="https://wa.me/79260730999" target="_blank" rel="noopener" data-site="whatsapp-link" data-goal="whatsapp_mobile_panel">WhatsApp</a>
   <a class="mobile-bar__btn" href="https://t.me/advokat_ivantsov" target="_blank" rel="noopener" data-site="telegram-link" data-goal="telegram_mobile_panel">Telegram</a>
+  <a class="mobile-bar__btn" href="#lead-form" data-goal="lead_mobile_panel">Заявка</a>
 </div>
 
-<!-- ===== Яндекс Метрика: учёт визитов без JavaScript =====
-     Сам счётчик грузится скриптом (js/main.js, константа METRIKA_ID).
-     Без этого пикселя посетитель с отключённым или не загрузившимся
-     JavaScript не попадал бы в статистику вообще — даже как просмотр.
-     Номер счётчика здесь задан числом: подставить его скриптом нельзя,
-     блок работает именно тогда, когда скрипты не выполняются.
-     ВНИМАНИЕ: при смене счётчика правится в двух местах — здесь
-     и в METRIKA_ID в js/main.js. -->
-<!-- ТЕСТОВАЯ КОПИЯ: noscript-пиксель Метрики удалён, чтобы тестовые заходы не попадали в статистику. В рабочей версии он есть. -->
+<!-- ============================= COOKIE-УВЕДОМЛЕНИЕ =============================
+     Показывается только до первого выбора. Отказ не ограничивает доступ
+     к сайту — счётчик Метрики просто не загружается. Скрыт до решения JS:
+     без скриптов аналитика всё равно не запустится, и баннер был бы
+     бессмысленной плашкой поверх контента. -->
+<div class="cookie" id="cookie-banner" role="dialog" aria-modal="false"
+     aria-labelledby="cookie-title" aria-describedby="cookie-text" tabindex="-1" hidden>
+  <div class="container cookie__inner">
+    <div class="cookie__body">
+      <h2 class="cookie__title" id="cookie-title">Файлы cookie</h2>
+      <p class="cookie__text" id="cookie-text">Яндекс&nbsp;Метрика помогает нам понять посещаемость сайта и&nbsp;эффективность рекламы. Её&nbsp;файлы cookie появятся только после «Принять»&nbsp;— отказ ничего не&nbsp;ограничивает. <a href="policy/#cookie">Подробнее о&nbsp;cookie</a></p>
+    </div>
+    <div class="cookie__actions">
+      <button class="btn btn--primary cookie__btn" type="button" id="cookie-accept">Принять</button>
+      <button class="btn btn--primary cookie__btn" type="button" id="cookie-decline">Только необходимые</button>
+    </div>
+  </div>
+  <!-- Крестик равнозначен кнопке «Только необходимые»: закрыть плашку,
+       ничего не разрешая. Молчаливого согласия по закрытию быть не должно. -->
+  <button class="cookie__close" type="button" id="cookie-close"
+          aria-label="Закрыть и оставить только необходимые cookie">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<!-- Пикселя Метрики для посетителей без JavaScript здесь намеренно нет.
+     Он срабатывал бы до всякого согласия: баннер выбора cookie показать
+     без скриптов невозможно, а пиксель отработал бы всё равно — то есть
+     обходил бы согласие, ради которого баннер и сделан.
+     Счётчик подключается только из js/main.js и только после «Принять». -->
 
 </body>
 </html>
